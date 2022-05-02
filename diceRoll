@@ -1,0 +1,18 @@
+fun main() {
+   
+    val myFirstDice = Dice(6, "blue")
+    println("Your ${myFirstDice.numSides} ${myFirstDice.colorDice} sided dice rolled ${myFirstDice.roll()}!")
+	
+    val mySecondDice = Dice(20, "red")
+    println("Your ${mySecondDice.numSides} ${mySecondDice.colorDice} sided dice rolled ${mySecondDice.roll()}!")
+}
+
+class Dice (val numSides: Int, val colorDice: String){
+    
+    fun roll(): Int {
+        return (1..numSides).random()
+    }
+    fun color(): String {
+        return colorDice
+    }
+}
